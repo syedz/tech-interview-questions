@@ -7,6 +7,32 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+// Solution 1
+// function palindrome(str) {
+//     let revStr = '';
+
+//     for (let char of str) {
+//         revStr = char + revStr;
+//     }
+
+//     return !!(revStr === str);
+// }
+
+// Solution 2
+function palindrome(str) {
+    let revStrArr = str.split('').reduce((revStr, char) => char + revStr, '');
+
+    return !!(revStrArr === str);
+}
+
+// Solution 3
+// Not an ideal solution to use every(),
+// because it's inconvenient and doing
+// twice the work.
+// function palindrome(str) {
+//     return str.split('').every((char, i) => {
+//         return char === str[str.length - i - 1];
+//     });
+// }
 
 module.exports = palindrome;

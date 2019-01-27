@@ -38,6 +38,7 @@ function reverse(str) {
 //     return reversed;
 // }
 
+// Solution 4
 // function reverse(str) {
 //     // Second arg in reduce() is the starting argument,
 //     // it will be passed into the arrow function as the
