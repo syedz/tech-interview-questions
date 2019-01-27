@@ -20,9 +20,9 @@
 
 // Solution 2
 function palindrome(str) {
-    let revStrArr = str.split('').reduce((revStr, char) => char + revStr, '');
+    let reversedStr = str.split('').reduce((revStr, char) => char + revStr, '');
 
-    return !!(revStrArr === str);
+    return !!(reversedStr === str);
 }
 
 // Solution 3
